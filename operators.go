@@ -1,4 +1,5 @@
 // operators lol
+//arithmetic ope : +, -, *, /, %, ++, --
 
 package main
 
