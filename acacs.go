@@ -7,6 +7,9 @@
 // append one slice to another slice
 // syntax --> slice3 = append(slice1, slice2...)
 
+// change the lenght of a slice
+// unlike arrays, is possible to change the l of a slice
+
 package main
 
 import ("fmt")
@@ -44,8 +47,18 @@ func main () {
 
 	slicea := []int{1, 2, 3}
 	sliceb := []int{4, 5, 6}
-	slicec := append(slicea, sliceb...)
+	slicec := append(slicea, sliceb...) // add slice at the end
 	fmt.Printf("slicec = %v\n", slicec)
 	fmt.Printf("lenght = %d\n", len(slicec))
 	fmt.Printf("capacity = %d\n", cap(slicec))
+
+	fmt.Printf("\n")
+	fmt.Printf("-----------------------------------\n")
+	fmt.Printf("\n")
+
+	arra := [7]int{7, 8, 9, 10, 11, 12 , 13, 14} // an array
+	myslicea := arra[1:5] // slice array
+	fmt.Printf("myslicea = %v\n", myslicea)
+	fmt.Printf("lenght = %d\n", len(myslicea))
+	fmt.Printf("capacity = %d\n", cap(myslicea))
 }
