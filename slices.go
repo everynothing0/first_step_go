@@ -21,6 +21,9 @@ package main
 import ("fmt")
 
 func main () {
+
+	fmt.Printf("\n")
+
 	myslice1 := []string{"GO", "slices", "are", "powerful"}
 
 	fmt.Println(len(myslice1))
@@ -46,4 +49,6 @@ func main () {
 	fmt.Printf("myslice2 = %v\n", myslice2)
 	fmt.Printf("length = %d\n", len(myslice2))
 	fmt.Printf("capacity = %d\n", cap(myslice2))
+
+	fmt.Printf("\n")
 }
