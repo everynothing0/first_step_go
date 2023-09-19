@@ -16,6 +16,10 @@ type Person struct {
 	salary int
 }
 
+func  new_line() {
+	fmt.Printf("\n")
+}
+
 func main() {
 	var pers1 Person
 	var pers2 Person
@@ -32,9 +36,29 @@ func main() {
 	pers2.job = "Dogsitter"
 	pers2.salary = 4200
 
+	new_line()
+
+	// Print pers1 info by calling a function
+	printPerson(pers1)
+
+	new_line()
+
 	// Access and print
 	fmt.Println("Name : ", pers1.name)
 	fmt.Println("Age : ", pers1.age, "Age Eglantine : ", pers2.age)
 	fmt.Println("Job : ", pers2.job)
 	fmt.Println("Salary : ", pers1.salary, "Salary of Eglantine : ", pers2.salary)
+
+	new_line()
+
+	printPerson(pers2)
+
+	new_line()
+}
+
+func printPerson(pers Person) {
+	fmt.Println("Name : ", pers.name)
+	fmt.Println("Age : ", pers.age)
+	fmt.Println("Job : ", pers.job)
+	fmt.Println("salary : ", pers.salary)
 }
