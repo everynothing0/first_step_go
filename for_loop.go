@@ -30,5 +30,13 @@ func main() {
 
 	for idx, val := range fruits {
 		fmt.Printf("%v\t%v\n", idx, val)
+	/* if we want to omit the indexes (idx stores the index, val stores the value) :
+	for _, val := range fruits {
+		fmt.Printf("%v\n", val)
+	}
+	and reverse :
+	for idx, _ idx := range fruits {
+		fmt.Printf("%v\n", idx)
+	} */
 	}
 }
