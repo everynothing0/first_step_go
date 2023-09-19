@@ -34,6 +34,23 @@ func	example(x int, y string) (result int, text1 string) {
 	return
 }
 
+func	testcount(x int) int {
+	if x == 11 {
+		return 0
+	}
+	fmt.Println(x)
+	return testcount(x + 1)
+}
+
+func	fact_recur(x float64) (y float64) {
+	if x > 0 {
+		y = x * fact_recur(x-1)
+	} else {
+		y = 1
+	}
+	return
+}
+
 func main() {
 
 	null()
@@ -54,4 +71,8 @@ func main() {
 	fmt.Println(a)
 //	a, b := example(5, "hello" --> not need call one more time)
 	fmt.Println(a, b)
+	null()
+	testcount(1) // start at 1
+	null()
+	fmt.Println(fact_recur(6)) // y! x!
 }
