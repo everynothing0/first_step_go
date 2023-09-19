@@ -21,6 +21,13 @@ func funct(x int, y int) int {
 	return x + y
 }
 
+// the same thing but useless (maybe im not sure)
+
+func	funct2(i int, u int) (result int) {
+	result = i - u
+	return
+}
+
 func main() {
 
 	null()
@@ -29,6 +36,7 @@ func main() {
 	message()
 	null()
 	fmt.Println(funct(1, 2))
+	fmt.Println(funct2(8, 4))
 	null()
 	fam_name("corr", 5)
 	fam_name("next", 31)
