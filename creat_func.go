@@ -28,6 +28,12 @@ func	funct2(i int, u int) (result int) {
 	return
 }
 
+func	example(x int, y string) (result int, text1 string) {
+	result = x + x
+	text1 = y + "world"
+	return
+}
+
 func main() {
 
 	null()
@@ -41,5 +47,11 @@ func main() {
 	fam_name("corr", 5)
 	fam_name("next", 31)
 	message()
-	null()
+	null() // two variables a and b for returns
+	_, b := example(5, "hello")
+	fmt.Println(b)
+	a, _ := example(5, "hello")
+	fmt.Println(a)
+//	a, b := example(5, "hello" --> not need call one more time)
+	fmt.Println(a, b)
 }
